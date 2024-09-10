@@ -185,25 +185,31 @@ h2 {
     background-color: #2C3E50;
     color: white;
     padding: 40px 20px;
+    text-align: center;
 }
 
-.cta-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+.cta-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.cta-section p {
-    font-size: 1.2rem;
-}
-
-.cta-section .cta-button {
+.cta-button {
     background-color: #18BC9C;
+    color: white;
     padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px 0;  /* Add some margin to space out the buttons */
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 200px;  /* Set a fixed width to make both buttons the same size */
+    text-align: center;
 }
 
-.cta-section .cta-button:hover {
+.cta-button:hover {
     background-color: #148F77;
 }
+
 
 /* Signup Form Styles */
 .signup-section {
