@@ -5,6 +5,28 @@
     box-sizing: border-box;
 }
 
+/* General link styles */
+a {
+    text-decoration: none;
+    color: inherit;  /* This will inherit the color from the parent element */
+}
+
+/* Header link styles */
+.header .logo a {
+    color: #ffffff;  /* White color for the homepage link */
+    font-weight: bold;
+}
+
+.header .logo a:hover {
+    text-decoration: underline;  /* Add underline on hover for better visual feedback */
+}
+
+/* Fix for the signup page link issue */
+.header .logo a:visited {
+    color: #ffffff;  /* Ensure visited links also appear white */
+}
+
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
