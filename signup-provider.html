@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up - Experienced PhD | Academia Mentor Trust</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Academia Mentor Trust</a></h1>
+    </div>
+    </header>
+
+    <!-- Signup Form -->
+    <section class="signup-section">
+        <div class="container">
+            <h2>Sign Up as an Experienced PhD</h2>
+            <form action="#" method="post" class="signup-form">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <label for="position">Current Position:</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="institution">Institution/Affiliation:</label>
+                <input type="text" id="institution" name="institution" required>
+
+                <label for="supervisors">Supervisors You Can Provide Insights On:</label>
+                <input type="text" id="supervisors" name="supervisors" placeholder="Enter names separated by commas" required>
+
+                <label for="verification">Verification Materials:</label>
+                <textarea id="verification" name="verification" placeholder="Provide links to your Orcid ID, personal website, or publications" required></textarea>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a>, and the <a href="#">Vetting Process</a>.</label>
+                </div>
+
+                <button type="submit" class="cta-button">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
