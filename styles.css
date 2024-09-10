@@ -1,43 +1,102 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+h1, h2, h3 {
+    color: #2C3E50;
+}
+
+p {
+    color: #555;
+}
+
+.section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+h2 {
+    font-size: 2.5em;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+.value-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
+.value {
+    max-width: 200px;
     padding: 20px;
-    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
+.value h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    background-color: #18BC9C;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #148F77;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2C3E50;
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+/* Workflow Section */
+.workflow-steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.cta {
+    margin-top: 30px;
 }
