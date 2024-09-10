@@ -11,14 +11,14 @@
     <header class="header">
         <div class="container">
             <h1 class="logo"><a href="index.html">Academia Mentor Trust</a></h1>
-    </div>
+        </div>
     </header>
 
     <!-- Signup Form -->
     <section class="signup-section">
         <div class="container">
             <h2>Sign Up as an Experienced PhD</h2>
-            <form action="#" method="post" class="signup-form">
+            <form action="#" method="post" enctype="multipart/form-data" class="signup-form">
                 <label for="fullname">Full Name:</label>
                 <input type="text" id="fullname" name="fullname" required>
 
@@ -37,11 +37,28 @@
                 <label for="institution">Institution/Affiliation:</label>
                 <input type="text" id="institution" name="institution" required>
 
-                <label for="supervisors">Supervisors You Can Provide Insights On:</label>
-                <input type="text" id="supervisors" name="supervisors" placeholder="Enter names separated by commas" required>
+                <!-- Supervisors Section -->
+                <div id="supervisor-container">
+                    <label for="supervisors">Supervisors You Can Provide Insights On:</label>
+                    <div class="supervisor-group">
+                        <input type="text" id="supervisor" name="supervisor[]" placeholder="Supervisor Name" required>
+                        <select name="relationship[]" required>
+                            <option value="" disabled selected>Select Relationship</option>
+                            <option value="PhD advisor">PhD Advisor</option>
+                            <option value="Masters or Bachelor Thesis advisor">Masters or Bachelor Thesis Advisor</option>
+                            <option value="Principal investigator / Group leader">Principal Investigator / Group Leader</option>
+                            <option value="close colleague">Close Colleague</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="button" id="add-supervisor-btn" class="cta-button">Add Another Supervisor</button>
 
-                <label for="verification">Verification Materials:</label>
-                <textarea id="verification" name="verification" placeholder="Provide links to your Orcid ID, personal website, or publications" required></textarea>
+                <!-- Verification Materials -->
+                <label for="verification-description">Verification Description:</label>
+                <textarea id="verification-description" name="verification-description" placeholder="Provide a brief description of your verification materials" required></textarea>
+
+                <label for="verification-files">Upload Verification Materials:</label>
+                <input type="file" id="verification-files" name="verification-files[]" multiple>
 
                 <div class="terms">
                     <input type="checkbox" id="terms" name="terms" required>
@@ -53,6 +70,27 @@
             <p>Already have an account? <a href="login.html">Log In</a></p>
         </div>
     </section>
+
+    <script>
+        document.getElementById('add-supervisor-btn').addEventListener('click', function() {
+            const supervisorContainer = document.getElementById('supervisor-container');
+            const newSupervisorGroup = document.createElement('div');
+            newSupervisorGroup.classList.add('supervisor-group');
+
+            newSupervisorGroup.innerHTML = `
+                <input type="text" name="supervisor[]" placeholder="Supervisor Name" required>
+                <select name="relationship[]" required>
+                    <option value="" disabled selected>Select Relationship</option>
+                    <option value="PhD advisor">PhD Advisor</option>
+                    <option value="Masters or Bachelor Thesis advisor">Masters or Bachelor Thesis Advisor</option>
+                    <option value="Principal investigator / Group leader">Principal Investigator / Group Leader</option>
+                    <option value="close colleague">Close Colleague</option>
+                </select>
+            `;
+
+            supervisorContainer.appendChild(newSupervisorGroup);
+        });
+    </script>
 
 </body>
 </html>
