@@ -171,3 +171,99 @@ h2 {
 .cta-section .cta-button:hover {
     background-color: #148F77;
 }
+
+/* Signup Form Styles */
+.signup-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.signup-section h2 {
+    margin-bottom: 40px;
+    color: #2C3E50;
+}
+
+.signup-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.signup-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.signup-form input,
+.signup-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.signup-form .terms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.signup-form .terms input {
+    margin-right: 10px;
+}
+
+.signup-form .terms label {
+    font-weight: normal;
+}
+
+.signup-form .terms a {
+    color: #18BC9C;
+    text-decoration: none;
+}
+
+.signup-form .terms a:hover {
+    text-decoration: underline;
+}
+
+.signup-form .cta-button {
+    background-color: #18BC9C;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-form .cta-button:hover {
+    background-color: #148F77;
+}
+
+.signup-section p {
+    margin-top: 20px;
+}
+
+.signup-section p a {
+    color: #18BC9C;
+    text-decoration: none;
+}
+
+.signup-section p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .signup-form {
+        width: 100%;
+    }
+}
+
